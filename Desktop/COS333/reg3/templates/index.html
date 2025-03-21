@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar's Office</title>
+</head>
+<body>
+    <h1>Registrar's Office</h1>
+    <h2>Class Search</h2>
+    <hr>
+    <form method="GET" action="/">
+        <table>
+            <tbody>
+                <tr>
+                    <td align="right">Dept:</td>
+                    <td><input id="deptInput" type="text" name="dept" value="{{ dept }}"></td>
+                </tr>
+                <tr>
+                    <td align="right">Number:</td>
+                    <td><input id="coursenumInput" type="text" name="coursenum" value="{{ num }}"></td>
+                </tr>
+                <tr>
+                    <td align="right">Area:</td>
+                    <td><input id="areaInput" type="text" name="area" value="{{ area }}"></td>
+                </tr>
+                <tr>
+                    <td align="right">Title:</td>
+                    <td><input id="titleInput" type="text" name="title" value="{{ title }}"></td>
+                </tr>
+                <tr>
+                    <td align="right"></td>
+                    <td><input id="submitButton" type="submit" value="Go"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <hr>
+    <table border="1" id="overviewsTable">
+        <tr>
+            <th align="left">ClassId</th>
+            <th align="left">Dept</th>
+            <th align="left">Num</th>
+            <th align="left">Area</th>
+            <th align="left">Title</th>
+        </tr>
+        {% for class in classes %}
+        <tr>
+            <td><a href="/class/{{ class[0] }}">{{ class[0] }}</a></td>
+            <td>{{ class[1] }}</td>
+            <td>{{ class[2] }}</td>
+            <td>{{ class[3] }}</td>
+            <td>{{ class[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Details</title>
+</head>
+<body>
+    <h1>Registrar's Office</h1>
+    <hr>
+    <h2>Class Details</h2>
+    <table border="1">
+        <tr><th align="left">Class Id</th><td>{{ basic_info[0] }}</td></tr>
+        <tr><th align="left">Days</th><td>{{ basic_info[2] }}</td></tr>
+        <tr><th align="left">Start time</th><td>{{ basic_info[3] }}</td></tr>
+        <tr><th align="left">End time</th><td>{{ basic_info[4] }}</td></tr>
+        <tr><th align="left">Building</th><td>{{ basic_info[5] }}</td></tr>
+        <tr><th align="left">Room</th><td>{{ basic_info[6] }}</td></tr>
+    </table>
+    <h2>Course Details</h2>
+    <table border="1">
+         <tr><th align="left">Course Id</th><td>{{ basic_info[1] }}</td></tr>
+        {% for dept in crosslistings %}
+        <tr><th align="left">Dept and Number</th><td>{{ dept[0] }} {{ dept[1] }}</td></tr>
+        {% endfor %}
+        <tr><th align="left">Area</th><td>{{ basic_info[7] }}</td></tr>
+        <tr><th align="left">Title</th><td>{{ basic_info[8] }}</td></tr>
+        <tr><th align="left">Description</th><td>{{ basic_info[9] }}</td></tr>
+        <tr><th align="left">Prerequisites</th><td>{{ basic_info[10] }}</td></tr>
+        <tr><th align="left">Professor</th><td>
+            {% for prof in professors %}{{ prof[0] }} {% endfor %}
+        </td></tr>
+    </table>
+    <hr>
+    Click here to do <a href="/">another class search</a>
+    <hr>
+    Created by <a href="https://akuei-ateny.github.io/personal-website/" target="_blank">Akuei</a> and Percy
+    <hr>
+</body>
+</html>
