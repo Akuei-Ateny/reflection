@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/layout.tsx","./src/components/tigerlogin.tsx","./src/context/authcontext.tsx","./src/context/themecontext.tsx","./src/pages/browse.tsx","./src/pages/login.tsx","./src/pages/onboarding.tsx","./src/pages/profile.tsx"],"version":"5.9.3"}

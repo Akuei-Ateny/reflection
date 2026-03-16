@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #FAFAF9;
+  color: #0d0d0d;
+}
+
+.dark {
+  background: #0d0d0d;
+  color: #fafafa;
+}
+
+.dark body {
+  background: #0d0d0d;
+  color: #fafafa;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.font-serif {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+/* Princeton-inspired subtle stripe (optional use) */
+.bg-princeton-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(231, 117, 0, 0.03) 8px,
+    rgba(231, 117, 0, 0.03) 16px
+  );
+}
+
+.dark .bg-princeton-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(231, 117, 0, 0.06) 8px,
+    rgba(231, 117, 0, 0.06) 16px
+  );
+}
